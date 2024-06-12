@@ -35,7 +35,7 @@ export default meta;
 export function Usage(props: ImageZoomPanProps) {
   return (
     <Center>
-      <Box maw={"50dvw"}>
+      <Box maw={"50rem"}>
         <ImageZoomPan {...props} />
       </Box>
     </Center>

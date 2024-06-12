@@ -46,25 +46,25 @@ export function ImageZoomPan(_props: ImageZoomPanProps) {
   };
 
   return (
-      <ScrollArea.Autosize ref={ref} type="never">
-        <Transition
-          mounted={hovered}
-          transition={scaleImage}
-          duration={duration}
-          exitDuration={exitDuration || duration}
-          timingFunction={timingFunction}
-          keepMounted={true}
-          onEntered={logOnEntered}
-        >
-          {(transitionStyle) => (
-            <Image
-              src={src}
-              fallbackSrc="https://placehold.co/600x400?text=Placeholder"
-              fit="contain"
-              style={{ ...transitionStyle, display: "block" }}
-            />
-          )}
-        </Transition>
-      </ScrollArea.Autosize>
+    <ScrollArea.Autosize ref={ref} type="never">
+      <Transition
+        mounted={hovered}
+        transition={scaleImage}
+        duration={duration}
+        exitDuration={exitDuration || duration}
+        timingFunction={timingFunction}
+        keepMounted={true}
+        onEntered={logOnEntered}
+      >
+        {(transitionStyle) => (
+          <Image
+            src={src}
+            fallbackSrc="https://placehold.co/600x400?text=Placeholder"
+            fit="contain"
+            style={{ ...transitionStyle, display: "block" }}
+          />
+        )}
+      </Transition>
+    </ScrollArea.Autosize>
   );
 }
