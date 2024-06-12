@@ -5,6 +5,7 @@ import {
   Transition,
   type TransitionProps,
   type MantineTransition,
+  useProps,
 } from "@mantine/core";
 import { useHover, useMouse, useMergedRef } from "@mantine/hooks";
 
@@ -14,19 +15,24 @@ export interface ImageZoomPanProps
     "duration" | "exitDuration" | "timingFunction"
   > {
   src: string;
-  scaleVector: number;
+  scaleVector?: number;
 }
 
-export function ImageZoomPan({
-  src,
-  scaleVector,
-  duration,
-  exitDuration,
-  timingFunction,
-}: ImageZoomPanProps) {
+export const defaultProps: Partial<ImageZoomPanProps> = {
+  scaleVector: 2,
+  duration: 500,
+  exitDuration: 500,
+  timingFunction: "ease-in-out",
+};
+
+export function ImageZoomPan(_props: ImageZoomPanProps) {
+  const props = useProps("ImageZoomPan", defaultProps, _props);
+
   const { ref: mouseRef, x, y } = useMouse();
   const { ref: hoverRef, hovered } = useHover();
   const ref = useMergedRef(hoverRef, mouseRef);
+
+  const { src, scaleVector, duration, exitDuration, timingFunction } = props;
 
   const scaleImage: MantineTransition = {
     in: { transform: `scale(${scaleVector})` },

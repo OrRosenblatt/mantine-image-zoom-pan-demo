@@ -11,12 +11,7 @@ export function App() {
   return (
     <MantineProvider theme={createTheme({})}>
       <BasicAppShell>
-        <ImageZoomPan
-          src={exampleImage.href}
-          scaleVector={2}
-          timingFunction="ease-in-out"
-          duration={500}
-        />
+        <ImageZoomPan src={exampleImage.href} />
       </BasicAppShell>
     </MantineProvider>
   );
