@@ -33,3 +33,6 @@ esm
 !.vscode/settings.json
 .nova/
 .gitpod.yml
+
+#storybook
+storybook-static

@@ -12,7 +12,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier . --write --ignore-unknown",
-    "storybook": "source .env && storybook dev --port $STORYBOOK_PORT"
+    "storybook": "source .env && storybook dev --port $STORYBOOK_PORT",
+    "storybook:build": "storybook build"
   },
   "packageManager": "pnpm@9.3.0",
   "engines": {
