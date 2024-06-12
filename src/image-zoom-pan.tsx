@@ -20,8 +20,8 @@ export interface ImageZoomPanProps
 
 export const defaultProps: Partial<ImageZoomPanProps> = {
   scaleVector: 2,
-  duration: 500,
-  exitDuration: 500,
+  duration: 300,
+  exitDuration: 300,
   timingFunction: "ease-in-out",
 };
 
@@ -46,8 +46,7 @@ export function ImageZoomPan(_props: ImageZoomPanProps) {
   };
 
   return (
-    <Box ref={ref}>
-      <ScrollArea.Autosize type="never">
+      <ScrollArea.Autosize ref={ref} type="never">
         <Transition
           mounted={hovered}
           transition={scaleImage}
@@ -67,6 +66,5 @@ export function ImageZoomPan(_props: ImageZoomPanProps) {
           )}
         </Transition>
       </ScrollArea.Autosize>
-    </Box>
   );
 }
