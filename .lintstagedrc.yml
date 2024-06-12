@@ -1,0 +1,18 @@
+---
+"*.{{m,c}js,{j,t}s{,x}}":
+  - prettier --write
+
+"*.json":
+  - prettier --write
+
+"*.{md{,x},markdown}":
+  - prettier --write
+
+"*.html":
+  - prettier --write
+
+"*.{s,}css":
+  - prettier --write
+
+"*.(yml|yaml)":
+  - prettier --write
