@@ -1,0 +1,7 @@
+overrides:
+  - files:
+      - ".vscode/*.json"
+      - "tsconfig.json"
+      - "tsconfig.*.json"
+    options:
+      parser: jsonc

@@ -1,0 +1,19 @@
+version: "0.2"
+language: en-US
+allowCompoundWords: false
+useGitignore: true
+ignorePaths:
+  - .cspell/custom-dictionary.txt
+  - pnpm-lock.yaml
+dictionaryDefinitions:
+  - name: project-words
+    path: .cspell/custom-dictionary.txt
+    addWords: true
+languageSettings:
+  - languageId:
+      - typescript
+      - javascript
+      - json
+      - markdown
+    dictionaries:
+      - project-words
