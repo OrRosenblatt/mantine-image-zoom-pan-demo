@@ -10,7 +10,7 @@ import {
 const meta = {
   component: ImageZoomPan,
   argTypes: {
-    src: { control: "text", description: "Image URL" },
+    src: { control: "text" },
     scaleVector: { control: { type: "range", min: 2, max: 10, step: 1 } },
     duration: { control: { type: "range", min: 0, max: 500, step: 50 } },
     exitDuration: { control: { type: "range", min: 0, max: 500, step: 50 } },
