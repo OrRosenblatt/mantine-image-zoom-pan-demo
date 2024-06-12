@@ -1,2 +1,4 @@
+autodocs
 Autosize
 Mantine
+Rosenblatt
