@@ -61,7 +61,11 @@ export function ImageZoomPan(_props: ImageZoomPanProps) {
             src={src}
             fallbackSrc="https://placehold.co/600x400?text=Placeholder"
             fit="contain"
-            style={{ ...transitionStyle, display: "block" }}
+            style={{
+              ...transitionStyle,
+              display: "block",
+              "image-rendering": "-webkit-optimize-contrast",
+            }}
           />
         )}
       </Transition>
